@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="HyF.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+
+<body class="contacto">
+    <!--HEADER NAVBAR-->
+    <header>
+        <!--LOGO CON ANIMACION-->
+        <div class="header-container">
+            <div class="logo monedas">
+                <a href="index.html"><img src="img/Logo.jpg" alt="Logo del Gym" type="Logo del Gym"></a>
+            </div>
+
+            <!--NAV LINKS-->
+            <nav class="nav-5">
+                <a class="item" href="index.html">
+                    <div data-text="Inicio" class="linktext">Inicio</div>
+                    <div class="testbox fix"><span>Inicio</span></div>
+                </a>
+                <a class="item" href="disciplinas.html">
+                    <div data-text="Disciplinas" class="linktext">Disciplinas</div>
+                    <div class="testbox"><span>Disciplinas</span></div>
+                </a>
+                <a class="item" href="contacto.html">
+                    <div data-text="Contacto" class="linktext">Contacto</div>
+                    <div class="testbox fix"><span>Contacto</span></div>
+                </a>
+            </nav>
+        </div>
+        <!-- Botón Hamburguesa para móviles -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="zona1"></section>
+
+    <script>
+        // efecto scroll
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+        })
+    </script>
+
+    <div class="container-contacto">
+        <!-- FILA SUPERIOR: Info + Mapa -->
+        <div class="contacto-superior">
+            <!-- Info izquierda -->
+            <div class="info-contacto">
+                <h4>Redes</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/FuerzaAztecaGym/">Facebook</a></li>
+                    <li><a
+                            href="https://www.instagram.com/explore/locations/1029697831/fuerza-azteca-gym/">Instagram</a>
+                    </li>
+                </ul>
+
+                <h4>Teléfonos</h4>
+                <p>+1 52 656 210 1087</p>
+
+                <br>
+                <h4>Horario</h4>
+                <p>Lunes - Viernes <br>7:00 am / 10:00 pm</p>
+                <br>
+                <p>Sabado <br>9:00 am / 2:00 pm</p>
+            </div>
+
+            <!-- Mapa derecha -->
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9880.980747086838!2d-106.47930944022487!3d31.68292266627607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75f72db74b5b7%3A0x6e82d5495681de36!2sFuerza%20Azteca%20GYM!5e1!3m2!1ses-419!2smx!4v1756610694138!5m2!1ses-419!2smx"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- FILA INFERIOR: Tarifas -->
+        <div class="tarifas-container">
+            <div class="card">
+                <h4>Mensual</h4>
+                <p>$350.00 MX</p>
+            </div>
+            <div class="card">
+                <h4>Semestral</h4>
+                <p>$800.00 MX</p>
+            </div>
+            <div class="card">
+                <h4>Anual</h4>
+                <p>$1,500.00 MX</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Contacto -->
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Teléfono: +52 656 342 5653</li>
+                        <li>Correo: <a href="mailto:fuerza_azteca@gmail.com">fuerza_azteca@gmail.com</a></li>
+                        <li><a href="https://www.facebook.com/FuerzaAztecaGym/"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/explore/locations/1029697831/fuerza-azteca-gym/"><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal / Creador -->
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>Creado por: <a href="https://rnavarrete.site/" target="_blank">Ricardo Navarrete</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li>© 2025 Fuerza Azteca GYM</li>
+                    </ul>
+                </div>
+
+                <!-- Ubicación y Horario -->
+                <div class="footer-links">
+                    <h4>Ubicación y Horario</h4>
+                    <ul>
+                        <li>Dirección: Calle Falsa 123</li>
+                        <li>Lunes - Viernes: 7:00 - 22:00</li>
+                        <li>Sábado: 9:00 - 14:00</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

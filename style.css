@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: #F5F5F5;
+}
+
+.hero {
+    border: solid black;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.my_cover {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .my_cover {
+        height: 60vh;
+    }
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 90%;
+}
+
+
+
+/* Botón principal */
+.hero-content .btn {
+    background: #005999;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+
+.hero-content h2 {
+    margin-top: 48px;
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 45px;
+}
+
+.motivacional p {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.contenedor-buton {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 30px auto 0 auto;
+    /* arriba: 30px, auto a los lados para centrar */
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #005999;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Animación al pasar el mouse */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    background-color: #00aaff;
+    transform: scale(1.05);
+}
+
+.hero-content p {
+    margin-top: 300px;
+    font-size: 50px;
+}
+
+
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*TABLET*/
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .motivacional p {
+        font-size: 28px;
+    }
+
+    .hero-content .btn,
+    .contenedor-buton .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/*MOVILES*/
+@media (max-width:480px) {
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .motivacional p {
+        font-size: 20px;
+    }
+
+    .hero-content .btn,
+    .contenedor-buton .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

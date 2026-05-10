@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>
+        <title>Fuerza Azteca GYM</title>
+    </h1>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="HyF.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+
+<body class="inicio">
+    <!--HEADER NAVBAR-->
+    <header>
+        <!--LOGO CON ANIMACION-->
+        <div class="header-container">
+            <div class="logo monedas">
+                <a href="index.html"><img src="img/Logo.jpg" alt="Logo del Gym" type="Logo del Gym"></a>
+            </div>
+
+            <!--NAV LINKS-->
+            <nav class="nav-5">
+                <a class="item" href="index.html">
+                    <div data-text="Inicio" class="linktext">Inicio</div>
+                    <div class="testbox fix"><span>Inicio</span></div>
+                </a>
+                <a class="item" href="disciplinas.html">
+                    <div data-text="Disciplinas" class="linktext">Disciplinas</div>
+                    <div class="testbox"><span>Disciplinas</span></div>
+                </a>
+                <a class="item" href="contacto.html">
+                    <div data-text="Contacto" class="linktext">Contacto</div>
+                    <div class="testbox fix"><span>Contacto</span></div>
+                </a>
+            </nav>
+        </div>
+        <!-- Botón Hamburguesa para móviles -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="zona1"></section>
+
+    <script>
+        // efecto scroll
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+        })
+    </script>
+
+    <!--HERO-->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Aquí se forja la mejor versión de ti.</h2>
+            <a class="btn" href="https://www.facebook.com/FuerzaAztecaGym/">Programa una Visita</a>
+        </div>
+        <img class="my_cover" src="img/hero2.jpg" alt="Imagen hero para la pagina Inicio"
+            type="imagen hero de un modelo flexionando el bicep">
+    </section>
+
+    <!--FRASE MOTIVACIONAL-->
+    <h2 class="motivacional">
+        <p>MEJORA TU SALUD, DESARROLLA TU CAPACIDAD FÍSICA, Y CONSIGUE TUS OBJETIVOS.</p>
+    </h2>
+
+    <div class="contenedor-buton">
+        <a class="btn" href="disciplinas.html">Ver Disciplinas</a>
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Contacto -->
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Teléfono: +52 656 342 5653</li>
+                        <li>Correo: <a href="mailto:fuerza_azteca@gmail.com">fuerza_azteca@gmail.com</a></li>
+                        <li><a href="https://www.facebook.com/FuerzaAztecaGym/"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/explore/locations/1029697831/fuerza-azteca-gym/"><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal / Creador -->
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>Creado por: <a href="https://rnavarrete.site/" target="_blank">Ricardo Navarrete</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li>© 2025 Fuerza Azteca GYM</li>
+                    </ul>
+                </div>
+
+                <!-- Ubicación y Horario -->
+                <div class="footer-links">
+                    <h4>Ubicación y Horario</h4>
+                    <ul>
+                        <li>Dirección: Calle Falsa 123</li>
+                        <li>Lunes - Viernes: 6:00 - 22:00</li>
+                        <li>Sábado - Domingo: 8:00 - 20:00</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

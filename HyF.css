@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER BASE */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.7s;
+  padding: 30px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO ANIMACION */
+.logo img {
+  padding: 10px;
+  border: solid black;
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.monedas {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.monedas img {
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.monedas img:hover {
+  animation: girarMoneda 1s linear 1;
+}
+
+@keyframes girarMoneda {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* EFECTO SCROLL */
+header {
+  background: transparent;
+}
+
+header.abajo {
+  background: #1E1E1E;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo,
+header nav a {
+  color: #fff;
+}
+
+header.abajo .logo,
+header.abajo nav a {
+  color: #000;
+}
+
+/* NAV-5 EFECTO LINKS */
+.nav-5 .linktext {
+  font-size: 1.1em;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: #ffff;
+  text-decoration: none;
+  font-family: 'Black Ops One', 'Righteous', Arial, sans-serif;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-5 .linktext:after {
+  display: inline-block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transform: translate(-20px, -50px) rotate(-20deg);
+  color: #00aaff;
+  max-width: 50%;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-5 .item {
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  padding-top: 15px;
+  margin: 0 20px;
+  background: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-5 .item:hover .linktext:after,
+.nav-5 .item:hover .testbox {
+  visibility: visible;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav-5 .item:hover .linktext {
+  color: rgba(133, 185, 255, 0);
+  transition-delay: 0.3s;
+}
+
+.testbox {
+  position: absolute;
+  left: 50%;
+  height: 25px;
+  width: 100%;
+  top: 15px;
+  text-align: right;
+  overflow: hidden;
+  transform: translate(20px, -50px) rotate(20deg);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.fix {
+  left: calc(50% + -0.5px);
+}
+
+.testbox span {
+  font-size: 1.1em;
+  position: absolute;
+  left: -50%;
+  z-index: 2;
+  color: #00aaff;
+  font-family: 'Black Ops One', 'Righteous', Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+/* HERO DEMO */
+.zona1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(img/hero3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  .zona1 {
+    height: 60vh;
+  }
+}
+
+/* Hero visible solo en la página de inicio */
+body.inicio .zona1 {
+  display: block;
+}
+
+/* Hero oculta en todas las demás páginas */
+body:not(.inicio) .zona1 {
+  display: none !important;
+}
+
+/* ================= BOTÓN HAMBURGUESA ================= */
+.menu-toggle {
+  display: none;
+  /* Oculto por defecto en desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* Animación al abrir/cerrar menú */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================= MENÚ MÓVIL CENTRADO CON ANIMACIÓN ================= */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    width: 220px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-height: 0;
+    /* ¡Importantísimo! */
+    opacity: 0;
+    /* oculto inicialmente */
+    transition: all 0.4s ease;
+    z-index: 100;
+    padding-bottom: 15px;
+  }
+
+
+
+
+  .menu-toggle {
+    display: flex;
+    /* ahora sí se ve el botón */
+
+  }
+
+  nav.active {
+    max-height: 500px;
+    /* Abierto, suficiente para todos los links */
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    /* Animación de caída */
+  }
+
+  nav ul {
+    flex-direction: column;
+    /* Menú vertical */
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #f0f0f0;
+    /* Resalta al pasar mouse */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Contenedor principal ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* pequeño padding lateral */
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 50px;
+  padding: 80px 0;
+  background-color: #111;
+  /* fondo oscuro */
+  color: #fff;
+  text-align: center;
+  /* centra texto por defecto */
+}
+
+/* ===== Fila de enlaces ===== */
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* centra los bloques horizontalmente */
+  gap: 40px;
+  /* espacio entre secciones */
+  margin-bottom: 40px;
+}
+
+/* ===== Secciones del footer ===== */
+.footer-links {
+  flex: 1 1 200px;
+  /* flexible pero mínimo 200px */
+  max-width: 250px;
+  text-align: left;
+  /* títulos y links alineados a la izquierda dentro del bloque */
+}
+
+/* Título de cada sección */
+.footer-links h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 500;
+  border-bottom: 2px solid #00c3ff;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* Lista de links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #bbbbbb;
+  display: block;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+  padding-left: 6px;
+}
+
+/* ===== Pie de página ===== */
+footer p {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+}

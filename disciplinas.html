@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HyF.css">
+    <link rel="stylesheet" href="disciplinas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+
+<body class="disciplina">
+    <!--HEADER NAVBAR-->
+    <header>
+        <!--LOGO CON ANIMACION-->
+        <div class="header-container">
+            <div class="logo monedas">
+                <a href="index.html"><img src="img/Logo.jpg" alt="Logo del Gym" type="Logo del Gym"></a>
+            </div>
+
+            <!--NAV LINKS-->
+            <nav class="nav-5">
+                <a class="item" href="index.html">
+                    <div data-text="Inicio" class="linktext">Inicio</div>
+                    <div class="testbox fix"><span>Inicio</span></div>
+                </a>
+                <a class="item" href="disciplinas.html">
+                    <div data-text="Disciplinas" class="linktext">Disciplinas</div>
+                    <div class="testbox"><span>Disciplinas</span></div>
+                </a>
+                <a class="item" href="contacto.html">
+                    <div data-text="Contacto" class="linktext">Contacto</div>
+                    <div class="testbox fix"><span>Contacto</span></div>
+                </a>
+            </nav>
+        </div>
+        <!-- Botón Hamburguesa para móviles -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="zona1"></section>
+
+    <script>
+        // efecto scroll
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+        })
+    </script>
+
+
+    <!--TARJETAS DISCIPLINA-->
+    <h2>Disciplinas</h2>
+    <div class="container-disciplinas">
+
+        <div class="card">
+            <img src="img/zumbalogo2.jpg" alt="imagen del logo de zumba" type="logo de zumba">
+            <h4>Zumba</h4>
+            <p>Ejercita tu cuerpo y diviértete bailando al ritmo de la música.</p>
+        </div>
+
+        <div class="card">
+            <img src="img/spinninglogo2.jpg" alt="imagen del logo de Spinnig" type="logo del spinning">
+            <h4>Spinnig</h4>
+            <p>Pedalea y mejora tu resistencia mientras sigues el ritmo de la clase.</p>
+        </div>
+
+        <div class="card">
+            <img src="img/pesaslogo2.jpg" alt="imagen del logo de pesas"
+                type="logo de un hombre expandiendo la espalda">
+            <h4>Pesas</h4>
+            <p>Fortalece tus músculos y mejora tu fuerza de manera progresiva.</p>
+        </div>
+    </div>
+
+    <!--TARJETAS Equipos-->
+    <h2>Equipos</h2>
+    <div class="container-equipos">
+
+        <div class="cards">
+            <img src="img/estensiones.jpg" alt="maquinas de extenciones"
+                type="imagen donde se muestran las maquinas par ahacer extenciones de piernas">
+            <h4>Extenciones</h4>
+            <p>Fortalece tus piernas con movimientos precisos y efectivos.</p>
+        </div>
+
+        <div class="cards">
+            <img src="img/aparatocardio.jpg" alt="aparatos para cardio"
+                tyupa="imagen donde tenemos multiples aparatos para hacer cardio">
+            <h4>Cardio</h4>
+            <p>Aumenta tu resistencia y quema calorías de manera constante.</p>
+        </div>
+
+        <div class="cards">
+            <img src="img/mancuernas.jpg" alt="mancuernas" type="imagen de mancuernas">
+            <h4>Mancuernas</h4>
+            <p>Trabaja fuerza y tonifica tus músculos de forma controlada.</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="instructor-container">
+        <div class="instructor-img">
+            <img src="img/hero.jpg" alt="Instructor" type="imagen del instructor de FuerzaAztecaGym">
+        </div>
+        <div class="instructor-text">
+            <h3>Jose Choy</h3>
+            <p>Entrenador enfocado en tu progreso, fuerza y resistencia, de forma segura.</p>
+        </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Contacto -->
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Teléfono: +52 656 342 5653</li>
+                        <li>Correo: <a href="mailto:fuerza_azteca@gmail.com">fuerza_azteca@gmail.com</a></li>
+                        <li><a href="https://www.facebook.com/FuerzaAztecaGym/"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/explore/locations/1029697831/fuerza-azteca-gym/"><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal / Creador -->
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>Creado por: <a href="https://rnavarrete.site/" target="_blank">Ricardo Navarrete</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li>© 2025 Fuerza Azteca GYM</li>
+                    </ul>
+                </div>
+
+                <!-- Ubicación y Horario -->
+                <div class="footer-links">
+                    <h4>Ubicación y Horario</h4>
+                    <ul>
+                        <li>Dirección: Calle Falsa 123</li>
+                        <li>Lunes - Viernes: 6:00 - 22:00</li>
+                        <li>Sábado - Domingo: 8:00 - 20:00</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
